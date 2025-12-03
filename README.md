@@ -18,9 +18,20 @@ install dependencies
 sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 pip install werkzeug==0.15.4
 
+install virtual environment for python
+apt install python3.8-venv
+
+create a venv for apache
+python3 -m venv airflow_venv
+source airflow_venv/bin/activate
+
+install wheel because not all dependencies have been installed
+pip install wheel
+pip install google-re2
+
 then install apache
-export SLUGIFY_USES_TEXT_UNIDECODE=yes
-pip install "apache-airflow==2.10.5" --no-deps --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.10.5/constraints-3.8.txt"
+pip install apache-airflow==2.6.3
+
 
 
 To run airflow you first have to intsall UV, run this in your powershell
