@@ -30,7 +30,7 @@ pip install wheel
 pip install google-re2
 
 then install apache
-pip install apache-airflow==2.6.3
+pip install apache-airflow
 
 
 
