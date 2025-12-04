@@ -1,5 +1,21 @@
 # Data_Gathering_SIS2
 
+**Website description**
+IMDB - is the world's largest movie database. They have films, shows, news, events and many other pieces of media.
+
+
+**How to run scrapper**
+1. To run scraping we used playwright to open the browser and access the website
+2. After waiting for the entire page to load (it is dynamic) we start gathering movie list
+3. We extract links from every title and transform them into url
+4. By moving from movie to movie we scrap info based on html markup
+5. After which all movies get put into a single list and added to a JSON
+
+
+
+
+**How to run airflow**
+
 **Navigate to windows features and enable "Windows subsystems for linux"**
 
 **Download UBUNTU** https://apps.microsoft.com/detail/9nblggh4msv6?hl=ru-RU&gl=RU
@@ -48,6 +64,15 @@ airflow scheduler
 
 
 
+**Expected output**
+From scrapper
+{"imdb_id": "tt0111161", "title": "The Shawshank Redemption", "rating": "IMDb RATING9.3", "year": "1994"}
+
+From cleaner
+{"id": 111161, "title": "The Shawshank Redemption", "rating": 93.0, "year": 1994}
+
+From loader
+'111161', 'The Shawshank Redemption', 1994, 93
 
 
 
