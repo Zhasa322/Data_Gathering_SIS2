@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.providers.standard.operators.python import PythonOperator
+from airflow.operators.python import PythonOperator
 from datetime import datetime
 import logging
 
@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 #DAG
 with DAG(
     'imdb_pipeline',
-    start_date=datetime(2025, 1, 1),
+    start_date=datetime(2025, 12, 2),
     schedule='43 3 * * *'
 ) as dag:
 
@@ -30,4 +30,5 @@ with DAG(
     )
 
 #Order
+
 scraper >> cleaner >> loader
