@@ -41,7 +41,7 @@
   python3 -m venv airflow_venv
   
   **enter the venv**
-  source airflow_venv/bin/activate
+  source ~/airflow-env/bin/activate
   
   **install wheel because not all dependencies have been installed**
   pip install wheel
