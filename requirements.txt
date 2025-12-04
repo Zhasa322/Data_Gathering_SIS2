@@ -1,2 +1,2 @@
 playwright
-pache-airflow
+apache-airflow-providers-standard
